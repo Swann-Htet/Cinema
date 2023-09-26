@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+    --primary-color: #B70404;
+    --secondary-color: #FFE569;
+    --third-color: #F79327;
+    --light: #FFFFFF;
+    --dark: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+section {
+    min-height: 80vh;
+    padding: 80px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-family: Rubik;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* Navbar */
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    font-family: Rubik;
+    z-index: 999;
+}
+
+.left-nav ul, .right-nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.left-nav li, .right-nav li {
+    list-style: none;
+    padding: 20px 30px;
+    color: var(--light);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all ease-in-out 0.3s;
+}
+
+.left-nav li:hover {
+    color: var(--secondary-color);
+    background: var(--dark);
+}
+
+.right-nav li:hover {
+    color: var(--secondary-color);
+    background: var(--dark);
+}
+
+/* Home */
+#home {
+    background-image: url(../Images/156835-cinema_wallpapoers-cinema-theater-karikaalan-multiplex-1920x1080.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    cursor: pointer;
+}
+
+#home .text {
+    position: absolute;
+    font-family: Rubik;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#home .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0000007A;
+    z-index: 0;
+}
+
+#home .text h1 {
+    font-size: 4rem;
+    color: var(--light);
+    line-height: 10px;
+}
+
+#home .text p {
+    font-size: 1.5rem;
+    line-height: 10px;
+    color: var(--secondary-color);
+}
+
+/* Booking */
+#booking .card {
+    max-width: 300px;
+    margin-top: 50px;
+    position: relative;
+}
+
+#booking .card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#booking .card .play {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ff0000c1;
+    text-align: center;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease-in-out 0.3s;
+}
+
+#booking .card .play i {
+    font-size: 1.3rem;
+    color: var(--light);
+    line-height: 50px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+#booking .card .play:hover {
+    background-color: var(--primary-color);
+}
+
+#booking .movie-booking {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#booking .card-booking {
+    display: flex;
+    align-items: center;
+    font-family: Rubik;
+}
+
+#booking .card-booking input::placeholder {
+    color: #ffffffe4;
+}
+
+#booking .card-booking input{
+    display: block;
+    font-family: Rubik;
+    width: 100%;
+    margin: 30px 0;
+    height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    color: var(--light);
+    border-radius: 30px;
+}
+
+#booking label {
+    padding-left: 15px;
+}
+#booking select {
+    width: 100px;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    height: 30px;
+    margin: 0 20px;
+    font-family: Rubik;
+    padding-left: 15px;
+    color: var(--light);
+    border-radius: 30px;
+}
+
+#booking p {
+    padding-left: 15px;
+    margin: 30px 0;
+}
+
+#booking p  span {
+    background-color: var(--primary-color);
+    height: 30px;
+    padding: 5px 15px;
+    color: var(--light);
+    margin: 0 15px;
+    border-radius: 30px;
+}
+
+#booking button {
+    width: auto;
+    background-color: var(--primary-color);
+    height: 30px;
+    outline: none;
+    border: none;
+    padding: 5px 25px;
+    color: var(--light);
+    font-family: Rubik;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+#booking button:hover {
+    background-color: var(--third-color);
+    color: var(--dark);
+}
+
+/* Movie */
+.movie-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.movie-container .card-movie {
+    max-width: 250px;
+    font-family: Rubik;
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: var(--light);
+    border-radius: 0px 10px;
+}
+
+.movie-container .card-title {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-family: Rubik;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+.movie-container img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Contact */
+#contact .contact-container {
+    display: flex;
+    margin-top: 50px;
+}
+
+#contact h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 60px;
+}
+
+#contact .map iframe{
+    width: 600px;
+    height: 500px;
+}
+
+#contact .contact-detail {
+    width: 100%;
+    display: flex;
+    padding: 0 100px ;
+    align-items: center;
+    font-family: Rubik;
+    cursor: pointer;
+}
+
+#contact .contact-detail .contact-link {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--third-color);
+    transition: all ease-in-out 0.3s;
+    padding-left: 25px;
+}
+
+#contact .contact-detail .contact-link:hover {
+    background-color: var(--primary-color);
+    color: var(--light);
+}
+
+#contact .contact-detail .contact-link i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+/* Feedback */
+#feedback .feedback-form {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+#feedback input::placeholder, textarea::placeholder {
+    color: #ffffffe6;
+}
+#feedback input, textarea {
+    display: block;
+    font-family: Rubik;
+    width: 250px;
+    background-color: var(--primary-color);
+    margin: 30px 0;
+    height: 20px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: var(--light);
+}
+
+#feedback button {
+    width: 100%;
+    background-color: var(--primary-color);padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: var(--light);
+    font-family: Rubik;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+}
+
+#feedback button:hover {
+    background: var(--third-color);
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.footer {
+    margin: 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 30px;
+    font-family: Rubik;
+    color: var(--light);
+}
